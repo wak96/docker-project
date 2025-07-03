@@ -74,31 +74,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Portfolio.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-
-
-# Render database
-
-
-import os
-import dj_database_url
-
-if os.environ.get('RENDER'):
-
-    DATABASES = {
-        'default': dj_database_url.config(default='postgresql://details_owner:npg_XuDQPjHYk06R@ep-lingering-scene-a11yjuce-pooler.ap-southeast-1.aws.neon.tech/details?sslmode=require')
+    
+    
+    
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
 
 
 
@@ -162,25 +146,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'Media'
 
 
-#CLOUDINARY_STORAGE = {
-    #'CLOUD_NAME': 'danzhjiew',
-    #'API_KEY': '936591955183888',
-    #'API_SECRET': '3ILiN-SNraRS3tU_5syLlu93vqE',
-#}
-
-from dotenv import load_dotenv
-
-load_dotenv() 
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -190,6 +155,9 @@ CSRF_TRUSTED_ORIGINS = [
 
 
 # Send Email
+
+from dotenv import load_dotenv
+load_dotenv()
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
