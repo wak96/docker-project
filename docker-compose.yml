@@ -3,7 +3,10 @@ version: '3.8'
 services:
   web:
     build: ./Walid-Ayaan-Kawsar-main
-    command: gunicorn --bind 0.0.0.0:8000 Portfolio.wsgi:application
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             gunicorn Portfolio.wsgi:application --bind 0.0.0.0:8000"
     restart: always
     volumes:
       - ./Walid-Ayaan-Kawsar-main/static:/app/static
