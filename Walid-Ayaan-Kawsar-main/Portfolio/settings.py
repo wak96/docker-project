@@ -148,10 +148,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'Media'
 
 
-
-
 CSRF_TRUSTED_ORIGINS = [
-    'https://walid-ayaan-kawsar.onrender.com',
+    "http://localhost:9090",
 ]
 
 
