@@ -28,7 +28,15 @@ SECRET_KEY = 'django-insecure-&t5$cketqnql#@zmgm-()w4lp^t-sd^l9_9=h-moqp7--#o-_f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['192.168.0.107', 'localhost', '127.0.0.1']
+=======
+<<<<<<< HEAD
+ALLOWED_HOSTS = ['192.168.0.107', 'localhost', '127.0.0.1']
+=======
+ALLOWED_HOSTS = ['localhost', 'localhost:8000', '192.168.0.107']
+>>>>>>> a2e7d85211fbdcbc62ec0dffddcbc0dd23f3c5ce
+>>>>>>> 19066f630cdb95619f9d4b80edacd989610302ee
 
 
 # Application definition
@@ -149,6 +157,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 19066f630cdb95619f9d4b80edacd989610302ee
 #MEDIA_URL = '/media/'
 #MEDIA_ROOT = BASE_DIR/'Media'
 
@@ -160,11 +172,29 @@ MEDIA_URL = '/media/'
 CSRF_TRUSTED_ORIGINS = [
     'http://192.168.0.107',
     'http://192.168.0.107:9090',  # jei port e Django cholchhe
+<<<<<<< HEAD
+=======
+=======
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR/'Media'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://walid-ayaan-kawsar.onrender.com',
+>>>>>>> a2e7d85211fbdcbc62ec0dffddcbc0dd23f3c5ce
+>>>>>>> 19066f630cdb95619f9d4b80edacd989610302ee
 ]
 
 
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> a2e7d85211fbdcbc62ec0dffddcbc0dd23f3c5ce
+>>>>>>> 19066f630cdb95619f9d4b80edacd989610302ee
 # Send Email
 
 from dotenv import load_dotenv
