@@ -154,7 +154,7 @@ MEDIA_ROOT = BASE_DIR/'Media'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:9090", "192.168.0.107"
+    "http://localhost:9090",
 ]
 
 
